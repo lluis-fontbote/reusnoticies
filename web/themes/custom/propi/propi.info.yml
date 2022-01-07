@@ -1,0 +1,10 @@
+name: propi
+type: theme
+description: Primer tema propi fet amb Bootstrap
+base theme: stable
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+libraries:
+  - propi/global-styling
+  - propi/global-scripts
