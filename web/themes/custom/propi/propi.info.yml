@@ -4,6 +4,7 @@ description: Primer tema propi fet amb Bootstrap
 base theme: stable
 core: 8.x
 core_version_requirement: ^8 || ^9
+screenshot: propi.png
 
 libraries:
   - propi/global-styling
@@ -12,4 +13,4 @@ libraries:
 regions:
   header: 'Header'
   content: 'Content'
-  footer: 'Footer'
+  footer: 'Footer' 
