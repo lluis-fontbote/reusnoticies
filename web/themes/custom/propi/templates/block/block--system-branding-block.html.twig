@@ -15,12 +15,15 @@
 #}
 
 {% block content %}
+
   {% if site_logo %}
-    <a href="{{ path('<front>') }}" class="navbar-brand" rel="home">
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="navbar-brand">
       <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
   {% endif %}
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
 {% endblock %}
