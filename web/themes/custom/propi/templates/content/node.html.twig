@@ -69,26 +69,27 @@
 #}
 <article{{ attributes }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+  <div class="container py-3">
+    <div class="card">
+      <div class="row ">
+        <div class="col-md-4">
+            <img src="{{ file_url(node.field_imatge.entity.uri.value) }}" class="w-100">
+          </div>
+          <div class="col-md-8 px-3">
+            <div class="card-block px-3">
+              <h4 class="card-title">{{ title_prefix }}
+                {% if not page %}
+                  <h2{{ title_attributes }}>
+                    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+                  </h2>
+                {% endif %}
+                {{ title_suffix }}</h4>
+              <p class="card-text">{{ node.body.0.value | striptags | slice(0, 200) ~ '...' }}</p>
+              <a href="{{ url }}" class="btn btn-primary">Vés-hi</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-  {% endif %}
-
-  <div{{ content_attributes }}>
-    {{ content }}
+    </div>
   </div>
-
 </article>
