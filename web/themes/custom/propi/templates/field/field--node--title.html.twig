@@ -28,9 +28,9 @@
 {% if not is_inline %}
   {% include "field.html.twig" %}
 {% else %}
-<span{{ attributes }}>
+<h1 class="fw-bolder mb-1">
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
-</span>
+</h1>
 {% endif %}

@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <p>{{ content.field_subtitol }}</p>
+                    <!-- Post meta content-->
+                    <div class="text-muted fst-italic mb-2">{{ content.field_autor }} - {{ content.field_data }}</div>
+                </header>
+                <figure class="mb-4">
+                    {{ content.field_imatge }}
+                </figure>
+                <!-- Post content-->
+                <section class="mb-5">
+                    {{ content.body }}
+                </section>
+            </article>
+        </div>
+    </div>
+</div>
