@@ -10,8 +10,8 @@
  * @see template_preprocess_select()
  */
 #}
-{% apply spaceless %}
-  <select{{ attributes }}>
+{% spaceless %}
+  <select{{ attributes.addClass('form-control') }}>
     {% for option in options %}
       {% if option.type == 'optgroup' %}
         <optgroup label="{{ option.label }}">
@@ -24,4 +24,4 @@
       {% endif %}
     {% endfor %}
   </select>
-{% endapply %}
+{% endspaceless %}
